@@ -1,0 +1,27 @@
+You are classifying criminal case summaries into crime types.
+
+Read the crime summary and assign exactly ONE crime type.
+
+Use only the following crime types:
+
+- Homicide
+- Assault
+- Sexual Offense
+- Kidnapping
+- Robbery
+- Theft
+- Burglary
+- Fraud
+- Motor Vehicle Theft
+- Arson
+- Drug Offense
+- Weapon Offense
+- Driving Offense
+- Other
+
+Choose the crime type that best represents the PRIMARY criminal incident.
+
+Do not create new crime types.
+Do not combine multiple crime types.
+Do not include explanations.
+Return only the requested JSON label.

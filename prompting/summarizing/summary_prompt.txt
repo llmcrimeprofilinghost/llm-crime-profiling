@@ -1,0 +1,44 @@
+You are extracting factual information from a court opinion.
+ 
+FIRST, DETERMINE WHETHER THE OPINION DESCRIBES AN UNDERLYING CRIMINAL INCIDENT:
+ 
+- If the opinion is primarily about a civil or other non-criminal matter, output exactly: null
+ - If the opinion only references a criminal case, conviction, defendant, or criminal conduct incidentally, but the underlying matter being discussed is not a criminal incident, output exactly: null
+ - If there is no sufficiently described underlying criminal incident involving an identifiable suspect or defendant, output exactly: null
+ 
+If you determine that the opinion contains a substantive description of an underlying criminal incident, your task is to write a concise summary that is 70 words or less that describes the underlying criminal incident and the behavior of the primary defendant or suspect involved in that incident.
+ 
+IDENTIFYING THE SUBJECT:
+ - Focus on the defendant or suspect who is the primary subject of the underlying criminal offense described in the opinion.
+ - If multiple defendants or suspects are discussed, focus only on the individual whose alleged actions are most directly described in connection with the underlying offense.
+ - Do not combine actions, behaviors, or characteristics from multiple individuals.
+ - If the opinion does not contain enough information to clearly identify a single primary suspect or defendant, output exactly: null
+ 
+IMPORTANT RULES:
+ - Use only information explicitly stated in the opinion.
+ - Do not infer, speculate, estimate, or use outside knowledge.
+ - Do not add details that are implied but not explicitly stated.
+ - Clearly distinguish allegations, testimony, and accusations from established facts when relevant.
+ - Do not include legal conclusions unless necessary to accurately describe the alleged criminal conduct.
+ 
+Include, when explicitly stated:
+ - What the suspect was accused of doing.
+ - How the alleged crime was carried out.
+ - Relevant suspicious or observable behavior before, during, or after the offense.
+ - Relevant circumstances that led to the suspect being identified, located, or apprehended.
+ 
+Do NOT include:
+ - Age.
+ - Sex or gender. Do not use pronouns at all, such as "he", "her", "him", "she", "himself", "herself", "they", "their", "themself" etc. Do not use gendered nouns such as "male", "female", "men", "women", "man", "woman", etc.
+ - Do not indicate the year.
+ - Do not include names of countries, states, or territories.
+ - Race or ethnicity.
+ - Economic or socioeconomic status.
+ - Education level.
+ - Occupation, unless directly relevant to how the crime was carried out.
+ - Names, addresses, or other personally identifying information.
+ - Legal analysis, procedural history, appeals, sentencing, or discussion of legal standards unless necessary to understand the underlying criminal incident.
+ 
+Refer to individuals only using generic labels such as "the suspect," "the victim," "an accomplice," or "a witness."
+ 
+Output only the 2-4 sentence summary. Do not include headings, bullet points, explanations, or commentary.
